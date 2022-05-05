@@ -20,20 +20,38 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the YouGov Finance API
 ---
-
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the YouGov Finance API! You can use our API to access a range of data products built on top of consumer
+spending to better understand how, where and when people spend their money.
 
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+To authenticate your requests, please visit the API tab in our client portal to learn how to do so.
 
-# Authentication
+# Brands
 
-> To authorize, use this code:
+## Get brands
+Lists the brands in our dataset available to query over.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+
+# Transactions
+
+## Get transactions by brand and user demographics
+
+Transactions are queryable over brands and user demographics.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
 
 ```ruby
 require 'kittn'
@@ -58,18 +76,6 @@ const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
 ```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
 
 # Kittens
 
